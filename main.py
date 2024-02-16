@@ -8,7 +8,6 @@ api_key = 'b6b88d9945d8ba79611b74b4c2cb65dd'
 def fetch_weather_data(city):
     complete_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
     response = requests.get(complete_url)
-    print(response.json())
     return response.json()
 def display_weather_data(weather_data):
     if weather_data['cod'] != '404':
